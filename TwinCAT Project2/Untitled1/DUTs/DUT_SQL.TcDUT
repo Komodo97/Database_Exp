@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="DUT_SQL" Id="{efe611e9-ab2c-4634-9381-878d40ff1541}">
+    <Declaration><![CDATA[TYPE DUT_SQL :
+STRUCT
+	tagname 					: STRING(255);
+	tagvalue 					: STRING(255);
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="FC_SQL_UpdateCommands" Id="{fd6c82db-6dc4-4367-bf49-1658d2dd946a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION FC_SQL_UpdateCommands : STRING(255)
+VAR_INPUT
+	iValue		:INT;
+	iTag		:STRING;
+END_VAR
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[FC_SQL_UpdateCommands:='UPDATE tags SET tagvalue = ';
+FC_SQL_UpdateCommands:=CONCAT(STR1:=FC_SQL_UpdateCommands,STR2:=INT_TO_STRING(iValue));
+FC_SQL_UpdateCommands:=CONCAT(STR1:=FC_SQL_UpdateCommands,STR2:=' ');
+FC_SQL_UpdateCommands:=CONCAT(STR1:=FC_SQL_UpdateCommands,STR2:='WHERE tagname =  ');
+FC_SQL_UpdateCommands:=CONCAT(STR1:=FC_SQL_UpdateCommands,STR2:=iTag);]]></ST>
+    </Implementation>
+    <LineIds Name="FC_SQL_UpdateCommands">
+      <LineId Id="7" Count="0" />
+      <LineId Id="11" Count="3" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
